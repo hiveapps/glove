@@ -1,1 +1,75 @@
-<div>Hello World</div>
+<div style="font-weight:bold">No Glove No Love</div>
+<div>
+	<span>Business Name</span>
+	<input id="business" />
+</div>
+<div>
+	<span>Address</span>
+	<input id="address" />
+</div>
+<div>
+	<span>City</span>
+	<input id="city" />
+</div>
+<div>
+	<span>State</span>
+	<input id="state" />
+</div>
+<div>
+	<span>Zip</span>
+	<input id="zip" />
+</div>
+<div>
+	<span>Product</span>
+	<select id="product" disabled="true">
+		<option value="basic_gloves">Basic Gloves</option>
+	</select>
+</div>
+<div>
+	<span>Quantity</span>
+	<input id="quantity" />
+</div>
+<button onclick="submit()">Submit</button>
+<!--
+<a href="mailto:daniel@mysticstudios.com?subject=Oder">Submit</a>
+-->
+<script type="text/javascript">
+var submit = function(){
+    var crlf = "%0D%0A";
+	
+	var body =
+		"Business:" + document.getElementById("business").value + crlf +
+		"address:" + document.getElementById("address").value + crlf +
+		"city:" + document.getElementById("city").value + crlf +
+		"state:" + document.getElementById("state").value + crlf +
+		"zip:" + document.getElementById("zip").value + crlf +
+		"product:" + document.getElementById("product").value + crlf +
+		"quantity:" + document.getElementById("quantity").value;
+	
+	window.open('mailto:daniel@mysticstudios.com?subject=subject&body=' + body, "_blank");
+}
+/*
+document.addEventListener('deviceready', function () {
+    cordova.plugins.email.isAvailable(
+        function (isAvailable) {
+            alert("is email mobile available? " + (isAvailable ? "Yes" : "No"));
+            if(isAvailable){
+             window.plugin.email.open({
+                 to:      'daniel@mysticstudios.com',
+                 subject: 'Greetings',
+                 body:    'This is a test'
+             }, callback, scope);
+           }
+        }
+    );
+}, false);
+
+function callback(){
+    console.log("callback function");
+}
+
+function scope(){
+    console.log("scope function");
+}
+*/
+</script>
