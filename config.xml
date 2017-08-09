@@ -17,6 +17,7 @@
       Daniel Mellenthin
     </author>
 	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 	<access origin="tel:*" launch-external="yes"/>
 	<access origin="geo:*" launch-external="yes"/>
 	<access origin="mailto:*" launch-external="yes"/>
